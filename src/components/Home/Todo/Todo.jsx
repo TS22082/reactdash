@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../../../firebase";
+import "./Todo.css";
 
 const db = firebase.database();
 
@@ -22,7 +23,6 @@ class Todo extends Component {
         });
       });
       this.setState({ todos: todoArray });
-      console.log(this.state);
     });
   }
 
@@ -38,10 +38,19 @@ class Todo extends Component {
 
   render() {
     return (
-      <div>
+      <div className="todoContainer">
         <form onSubmit={this.addTodo}>
           <input onChange={this.handleChange} />
         </form>
+        <div>
+          {this.state.todos.map(todo => (
+            <div key={todo.id} className="todoList">
+              <p>{todo.todo}</p>
+              <button>Update</button>
+              <button>Delete</button>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
