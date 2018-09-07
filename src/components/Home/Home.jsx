@@ -11,7 +11,10 @@ class Home extends Component {
     return (
       <div>
         <button onClick={() => this.signout()}>Logout</button>
-        <Todo />
+        <div className="HomeContainer">
+          <h1>hello</h1>
+          <Todo />
+        </div>
       </div>
     );
   }
