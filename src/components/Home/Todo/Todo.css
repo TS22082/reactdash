@@ -1,3 +1,7 @@
+.todoContainer {
+  margin: 20px;
+}
+
 .todoList {
   display: grid;
   grid-template-columns: 80% 1fr 1fr;
@@ -6,7 +10,7 @@
 }
 
 input {
-  width: 99.4%;
+  width: 99%;
   padding-left: 5px;
   border: 1px solid lightgrey;
   border-radius: 3px;

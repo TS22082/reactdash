@@ -36,6 +36,16 @@ class Todo extends Component {
     db.ref("todos").push({ todo: this.state.todoText });
   };
 
+  removeTodo = todoID => {
+    const itemRef = db.ref(`/todos/${todoID}`);
+    itemRef.remove();
+  };
+
+  updateTodo = (todoID, todoText) => {
+    const itemRef = db.ref(`/todos/${todoID}`);
+    itemRef.update({ todo: todoText });
+  };
+
   render() {
     return (
       <div className="todoContainer">
@@ -45,8 +55,14 @@ class Todo extends Component {
         {this.state.todos.map(todo => (
           <div key={todo.id} className="todoList">
             <p>{todo.todo}</p>
-            <button>Update</button>
-            <button>Delete</button>
+            <button
+              onClick={() => {
+                this.updateTodo(todo.id, this.state.todoText);
+              }}
+            >
+              Update
+            </button>
+            <button onClick={() => this.removeTodo(todo.id)}>Delete</button>
           </div>
         ))}
       </div>
