@@ -50,7 +50,7 @@ class Todo extends Component {
     return (
       <div className="todoContainer">
         <form onSubmit={this.addTodo}>
-          <input onChange={this.handleChange} placeholder="Add todo" />
+          <input onChange={this.handleChange} placeholder="Add text . . ." />
         </form>
         {this.state.todos.map(todo => (
           <div key={todo.id} className="todoList">
@@ -59,10 +59,16 @@ class Todo extends Component {
               onClick={() => {
                 this.updateTodo(todo.id, this.state.todoText);
               }}
+              className="updateBtn"
             >
               Update
             </button>
-            <button onClick={() => this.removeTodo(todo.id)}>Delete</button>
+            <button
+              onClick={() => this.removeTodo(todo.id)}
+              className="deleteBtn"
+            >
+              Delete
+            </button>
           </div>
         ))}
       </div>

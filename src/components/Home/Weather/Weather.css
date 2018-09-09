@@ -1,0 +1,13 @@
+.WeatherContainer {
+  width: 30%;
+  background-color: #f39c12;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.WeatherContainer p {
+  color: white;
+  font-size: 1.15em;
+  margin-left: 20px;
+}

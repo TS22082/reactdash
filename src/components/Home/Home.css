@@ -1,0 +1,8 @@
+.HomeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #34495e;
+  height: 100vh;
+  padding-left: 30px;
+  padding-right: 30px;
+}
