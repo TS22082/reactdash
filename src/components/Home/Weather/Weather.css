@@ -1,13 +1,16 @@
 .WeatherContainer {
-  width: 30%;
+  display: grid;
+}
+
+.OutsideWeather {
   background-color: #f39c12;
   border-radius: 5px;
-  padding: 20px;
+  width: 30%;
+  padding: 20px 50px 20px 50px;
   margin-top: 10px;
 }
 
-.WeatherContainer p {
+.OutsideWeather p {
   color: white;
   font-size: 1.15em;
-  margin-left: 20px;
 }
