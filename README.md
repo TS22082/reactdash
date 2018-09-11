@@ -1,3 +1,7 @@
+Authentication and todo list powered by Firebase, weather and climate data from the OpenWeatherAPI and sensors attached to a NODEMCU in my house. News from opennewsAPI.com. 
+
+This project is live https://ts22082.github.io/reactdash/
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
