@@ -3,22 +3,33 @@ import axios from "axios";
 import "./Weather.css";
 import WEATHER_API_KEY from "../../../weatherPrivate";
 
-const apiCall =
+const API =
   "https://api.openweathermap.org/data/2.5/weather?zip=94610,us&units=imperial&APPID=";
 
 class Weather extends Component {
-  state = {};
-  componentDidMount() {
-    axios.get(apiCall + WEATHER_API_KEY).then(res => {
-      console.log(res.data);
+  constructor() {
+    super();
+    this.state = {};
+    this.getWeather = this.getWeather.bind(this);
+  }
+  getWeather = () => {
+    axios.get(API + WEATHER_API_KEY).then(response => {
+      const data = response.data.main;
+      console.log(data);
       this.setState({
-        temp: res.data.main.temp,
-        tempMin: res.data.main.temp_min,
-        tempMax: res.data.main.temp_max,
-        humidity: res.data.main.humidity
+        temp: data.temp,
+        tempMin: data.temp_min,
+        tempMax: data.temp_max,
+        humidity: data.humidity
       });
     });
+    setTimeout(this.getWeather, 5000);
+  };
+
+  componentDidMount() {
+    this.getWeather();
   }
+
   render() {
     return (
       <div className="WeatherContainer">
