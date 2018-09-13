@@ -10,6 +10,7 @@ class Todo extends Component {
     this.state = { todos: [], todoText: "" };
     this.handleChange = this.handleChange.bind(this);
     this.addTodo = this.addTodo.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
 
   componentDidMount() {
@@ -46,15 +47,29 @@ class Todo extends Component {
     itemRef.update({ todo: todoText });
   };
 
+  updateState = todoID => {
+    db.ref(`/todos/${todoID}`)
+      .once("value")
+      .then(snapshot => {
+        this.setState({ todoText: snapshot.val().todo });
+      });
+    // this.setState({ todoText: itemRef });
+    // console.log(this.state);
+  };
+
   render() {
     return (
       <div className="todoContainer">
         <form onSubmit={this.addTodo}>
-          <input onChange={this.handleChange} placeholder="Add text . . ." />
+          <input
+            onChange={this.handleChange}
+            placeholder="Add text . . ."
+            value={this.state.todoText}
+          />
         </form>
         {this.state.todos.map(todo => (
           <div key={todo.id} className="todoList">
-            <p>{todo.todo}</p>
+            <p onClick={() => this.updateState(todo.id)}>{todo.todo}</p>
             <button
               onClick={() => {
                 this.updateTodo(todo.id, this.state.todoText);
