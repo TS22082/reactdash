@@ -35,6 +35,7 @@ class Todo extends Component {
   addTodo = e => {
     e.preventDefault();
     db.ref("todos").push({ todo: this.state.todoText });
+    this.setState({ todoText: "" });
   };
 
   removeTodo = todoID => {
@@ -45,6 +46,7 @@ class Todo extends Component {
   updateTodo = (todoID, todoText) => {
     const itemRef = db.ref(`/todos/${todoID}`);
     itemRef.update({ todo: todoText });
+    this.setState({ todoText: "" });
   };
 
   updateState = todoID => {
@@ -53,8 +55,6 @@ class Todo extends Component {
       .then(snapshot => {
         this.setState({ todoText: snapshot.val().todo });
       });
-    // this.setState({ todoText: itemRef });
-    // console.log(this.state);
   };
 
   render() {
