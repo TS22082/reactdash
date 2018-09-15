@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import firebase from "../../firebase";
 import Todo from "./Todo/Todo";
 import Weather from "./Weather/Weather";
+import Quote from "./QuoteOfDay/Quote";
 import "./Home.css";
 
 class Home extends Component {
@@ -20,9 +21,9 @@ class Home extends Component {
     return (
       <div>
         <div className="HomeContainer">
-          <div>
-            <Weather />
-          </div>
+          <Weather />
+          <Quote />
+
           <Todo />
         </div>
       </div>

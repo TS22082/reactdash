@@ -1,6 +1,7 @@
 .HomeContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 50%;
+  grid-column-gap: 15px;
   background-color: #34495e;
   height: 100vh;
   padding-left: 30px;

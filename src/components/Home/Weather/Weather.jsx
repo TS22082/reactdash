@@ -32,22 +32,21 @@ class Weather extends Component {
 
   render() {
     return (
-      <div className="WeatherContainer">
-        <div className="OutsideWeather">
-          <p>
-            Temp: {this.state.temp}
-            °F
-          </p>
-          <p>
-            Temp Min: {this.state.tempMin}
-            °F
-          </p>
-          <p>
-            Temp Max: {this.state.tempMax}
-            °F
-          </p>
-          <p>Humidity: {this.state.humidity}%</p>
-        </div>
+      <div className="OutsideWeather">
+        <h3>Weather: Oakland CA</h3>
+        <p>
+          Temp: {this.state.temp}
+          °F
+        </p>
+        <p>
+          Temp Min: {this.state.tempMin}
+          °F
+        </p>
+        <p>
+          Temp Max: {this.state.tempMax}
+          °F
+        </p>
+        <p>Humidity: {this.state.humidity}%</p>
       </div>
     );
   }

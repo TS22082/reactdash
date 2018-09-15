@@ -1,16 +1,16 @@
-.OutsideWeather {
-  background-color: #f39c12;
-  color: white;
+.QuoteContainer {
+  background-color: #8e44ad;
+  color: White;
   border-radius: 5px;
   margin-top: 10px;
   height: 40%;
 }
 
-.OutsideWeather h3 {
+.QuoteContainer h3 {
   padding-left: 10px;
 }
-.OutsideWeather p {
+
+.QuoteContainer p {
   padding-left: 20px;
-  padding-right: 5px;
   font-size: 1.05em;
 }
