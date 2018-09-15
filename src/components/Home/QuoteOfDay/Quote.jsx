@@ -14,7 +14,9 @@ class Quote extends Component {
   getQuote = () => {
     axios.get(QUOTE_API_URL).then(response => {
       const quote = response.data.contents.quotes[0].quote;
+      const author = response.data.contents.quotes[0].author;
       this.setState({ quote: quote });
+      this.setState({ author: author });
     });
   };
 
@@ -27,6 +29,7 @@ class Quote extends Component {
       <div className="QuoteContainer">
         <h3>Quote of the Day:</h3>
         <p>{this.state.quote}</p>
+        <p>- {this.state.author}</p>
       </div>
     );
   }
