@@ -38,8 +38,8 @@ class App extends Component {
         <div>
           <Router>
             <div>
-              <Route extact path="/" component={Home} />
-              <Redirect to="/" />
+              <Route extact path="/reactdash" component={Home} />
+              <Redirect to="/reactdash" />
             </div>
           </Router>
         </div>
