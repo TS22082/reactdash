@@ -9,7 +9,7 @@ const API =
 class Weather extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { getWeather: true };
     this.getWeather = this.getWeather.bind(this);
   }
   getWeather = () => {
@@ -23,12 +23,13 @@ class Weather extends Component {
         humidity: data.humidity
       });
     });
-    setTimeout(this.getWeather, 5000);
   };
 
   componentDidMount() {
     this.getWeather();
   }
+
+  componentWillUnmount() {}
 
   render() {
     return (
