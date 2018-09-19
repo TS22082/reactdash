@@ -2,16 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
+// import Login from "./components/Login/Login";
+import Resume from "./components/Resume/Resume";
 import firebase from "./firebase.js";
 
-const db = firebase.database();
 const auth = firebase.auth();
-
-db.ref("CON").on("value", snapshot => {
-  const val = snapshot.val();
-  console.log(val);
-});
 
 class App extends Component {
   constructor() {
@@ -25,10 +20,8 @@ class App extends Component {
     auth.onAuthStateChanged(user => {
       if (user) {
         this.setState({ Authenticated: true });
-        console.log(this.state.Authenticated);
       } else {
         this.setState({ Authenticated: false });
-        console.log(this.state.Authenticated);
       }
     });
   }
@@ -48,8 +41,8 @@ class App extends Component {
       return (
         <Router>
           <div>
-            <Route exact path="/login" component={Login} />
-            <Redirect to="/login" />
+            <Route exact path="/Resume" component={Resume} />
+            <Redirect to="/Resume" />
           </div>
         </Router>
       );
