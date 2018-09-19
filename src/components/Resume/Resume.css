@@ -4,7 +4,8 @@
   border-bottom: solid;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: white;
+  background-color: black;
+  transition: 0.5s;
 }
 
 .loginForm {
@@ -14,19 +15,38 @@
 
 .title {
   font-family: "Courier New", Courier, monospace;
+  color: white;
   letter-spacing: 0.75px;
   padding-left: 10px;
   font-weight: bold;
   align-self: center;
 }
 .adminToggle {
-  float: right;
   border: solid;
   background-color: black;
   color: white;
+  height: 25px;
+  width: 60px;
+  justify-self: right;
 }
 
 .resumeContainer {
-  background-color: lightgray;
+  background-color: black;
+  background-image: url("../../img/galaxy.jpg");
   height: 100vh;
+  transition: 1s;
+}
+
+.meContainer {
+  background-image: url("../../img/galaxy.jpg");
+  height: 100%;
+  display: grid;
+}
+
+.avatarImg {
+  height: 250px;
+  width: 250px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  justify-self: center;
 }

@@ -33,9 +33,16 @@ class Resume extends Component {
             <Login />
           </div>
         </div>
-        <button className="adminToggle" onClick={() => this.adminToggle()}>
-          {this.state.toggle}
-        </button>
+        <div className="meContainer">
+          <button className="adminToggle" onClick={() => this.adminToggle()}>
+            {this.state.toggle}
+          </button>
+          <img
+            src={require("../../img/myAvatar.png")}
+            alt="broke img"
+            className="avatarImg"
+          />
+        </div>
       </div>
     );
   }
