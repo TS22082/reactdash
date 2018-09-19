@@ -5,32 +5,37 @@ import Login from "../Login/Login";
 class Resume extends Component {
   constructor(props) {
     super(props);
-    this.state = { showLogin: false, toggle: "Close" };
-    this.showLogin = this.showLogin.bind(this);
+    this.state = { showLogin: false, toggle: "Admin" };
+    this.adminToggle = this.adminToggle.bind(this);
   }
 
-  showLogin = () => {
+  componentDidMount() {
+    this.adminToggle();
+  }
+
+  adminToggle = () => {
     if (this.state.showLogin === false) {
       this.setState({ showLogin: true });
       document.getElementsByClassName("login")[0].style.height = "0vh";
-      this.setState({ toggle: "open" });
+      this.setState({ toggle: "Admin" });
     } else {
       this.setState({ showLogin: false });
-      document.getElementsByClassName("login")[0].style.height = "80vh";
+      document.getElementsByClassName("login")[0].style.height = "10vh";
       this.setState({ toggle: "close" });
     }
   };
   render() {
     return (
-      <div>
-        <h1>Resume Works</h1>
-        <button id="loginToggle" onClick={() => this.showLogin()}>
+      <div className="resumeContainer">
+        <div className="login">
+          <p className="title">Admin Login:</p>
+          <div className="loginForm">
+            <Login />
+          </div>
+        </div>
+        <button className="adminToggle" onClick={() => this.adminToggle()}>
           {this.state.toggle}
         </button>
-        <div className="login">
-          {" "}
-          <Login />
-        </div>
       </div>
     );
   }

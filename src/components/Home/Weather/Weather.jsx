@@ -12,6 +12,7 @@ class Weather extends Component {
     this.state = { getWeather: true };
     this.getWeather = this.getWeather.bind(this);
   }
+
   getWeather = () => {
     axios.get(API + WEATHER_API_KEY).then(response => {
       const data = response.data.main;

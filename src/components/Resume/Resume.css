@@ -1,4 +1,32 @@
 .login {
+  height: 0vh;
   overflow: hidden;
-  height: 80vh;
+  border-bottom: solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+}
+
+.loginForm {
+  align-self: center;
+  justify-self: end;
+}
+
+.title {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.75px;
+  padding-left: 10px;
+  font-weight: bold;
+  align-self: center;
+}
+.adminToggle {
+  float: right;
+  border: solid;
+  background-color: black;
+  color: white;
+}
+
+.resumeContainer {
+  background-color: lightgray;
+  height: 100vh;
 }
