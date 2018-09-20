@@ -1,7 +1,3 @@
-.loginContainer {
-  margin: 0px;
-}
-
 .txtInput {
   border-radius: 3px;
   font-size: 1.05em;
@@ -22,15 +18,4 @@
   border-color: white;
   color: white;
   background-color: black;
-}
-
-.meContainer {
-  height: 99%;
-}
-
-.avatarImg {
-  height: 250px;
-  width: 250px;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
 }

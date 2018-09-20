@@ -6,11 +6,12 @@
   grid-template-columns: 1fr 1fr;
   background-color: black;
   transition: 0.5s;
+  align-items: center;
+  margin: 0px;
 }
 
 .loginForm {
-  align-self: center;
-  justify-self: end;
+  justify-self: right;
 }
 
 .title {
@@ -19,7 +20,7 @@
   letter-spacing: 0.75px;
   padding-left: 10px;
   font-weight: bold;
-  align-self: center;
+  margin: 0px;
 }
 .adminToggle {
   border: solid;
@@ -27,26 +28,21 @@
   color: white;
   height: 25px;
   width: 60px;
-  justify-self: right;
+  float: right;
+  margin: 0;
 }
 
 .resumeContainer {
-  background-color: black;
   background-image: url("../../img/galaxy.jpg");
   height: 100vh;
-  transition: 1s;
-}
-
-.meContainer {
-  background-image: url("../../img/galaxy.jpg");
-  height: 100%;
-  display: grid;
 }
 
 .avatarImg {
   height: 250px;
   width: 250px;
+  padding-top: 150px;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  justify-self: center;
+  display: block;
+  margin: auto;
 }
