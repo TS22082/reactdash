@@ -1,7 +1,8 @@
 .QuoteContainer {
-  background-color: #8e44ad;
+  border: solid;
+  border-color: #8e44ad;
+  background-color: black;
   color: White;
-  border-radius: 5px;
   margin-top: 10px;
   height: 250px;
 }

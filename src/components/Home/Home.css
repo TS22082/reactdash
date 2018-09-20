@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr 50%;
   grid-column-gap: 15px;
   background-color: #34495e;
+  background-image: url("../../img/galaxy.jpg");
+
   height: 100vh;
   padding-left: 10px;
   padding-right: 10px;

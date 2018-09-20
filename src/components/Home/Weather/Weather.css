@@ -1,5 +1,7 @@
 .OutsideWeather {
-  background-color: #f39c12;
+  background-color: black;
+  border: solid;
+  border-color: #f39c12;
   color: white;
   border-radius: 5px;
   margin-top: 10px;
