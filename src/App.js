@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Resume from "./components/Resume/Resume";
 import firebase from "./firebase.js";
@@ -30,8 +30,7 @@ class App extends Component {
         <div>
           <Router>
             <div>
-              <Route extact path="/reactdash" component={Home} />
-              <Redirect to="/reactdash" />
+              <Home />
             </div>
           </Router>
         </div>
@@ -40,8 +39,7 @@ class App extends Component {
       return (
         <Router>
           <div>
-            <Route exact path="/Resume" component={Resume} />
-            <Redirect to="/Resume" />
+            <Resume />
           </div>
         </Router>
       );
