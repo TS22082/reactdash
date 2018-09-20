@@ -16,26 +16,28 @@ class Resume extends Component {
   adminToggle = () => {
     if (this.state.showLogin === false) {
       this.setState({ showLogin: true });
-      document.getElementsByClassName("login")[0].style.height = "0vh";
+      document.getElementsByClassName("nav")[0].style.height = "0px";
       this.setState({ toggle: "Admin" });
     } else {
       this.setState({ showLogin: false });
-      document.getElementsByClassName("login")[0].style.height = "10vh";
+      document.getElementsByClassName("nav")[0].style.height = "100%";
       this.setState({ toggle: "close" });
     }
   };
   render() {
     return (
       <div className="resumeContainer">
-        <div className="login">
-          <p className="title">Admin Login:</p>
-          <div className="loginForm">
-            <Login />
+        <div>
+          <div className="nav">
+            <p className="title">Admin Login:</p>
+            <div className="loginForm">
+              <Login />
+            </div>
           </div>
+          <button className="adminToggle" onClick={() => this.adminToggle()}>
+            {this.state.toggle}
+          </button>
         </div>
-        <button className="adminToggle" onClick={() => this.adminToggle()}>
-          {this.state.toggle}
-        </button>
         <img
           src={require("../../img/myAvatar.png")}
           alt="broke img"

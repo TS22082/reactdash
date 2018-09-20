@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home/Home";
-// import Login from "./components/Login/Login";
 import Resume from "./components/Resume/Resume";
 import firebase from "./firebase.js";
 

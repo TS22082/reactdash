@@ -1,12 +1,29 @@
-.login {
-  height: 0vh;
-  overflow: hidden;
-  border-bottom: solid;
+.resumeContainer {
+  background-image: url("../../img/galaxy.jpg");
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10vh 1fr;
+}
+
+.nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 0px;
+  overflow: hidden;
+  border: none;
   background-color: black;
   transition: 0.5s;
   align-items: center;
+  margin: 0px;
+  height: 10vh;
+}
+
+.title {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  letter-spacing: 1px;
+  padding-left: 10px;
+  font-weight: bold;
   margin: 0px;
 }
 
@@ -14,14 +31,6 @@
   justify-self: right;
 }
 
-.title {
-  font-family: "Courier New", Courier, monospace;
-  color: white;
-  letter-spacing: 0.75px;
-  padding-left: 10px;
-  font-weight: bold;
-  margin: 0px;
-}
 .adminToggle {
   border: solid;
   background-color: black;
@@ -29,20 +38,14 @@
   height: 25px;
   width: 60px;
   float: right;
-  margin: 0;
-}
-
-.resumeContainer {
-  background-image: url("../../img/galaxy.jpg");
-  height: 100vh;
 }
 
 .avatarImg {
   height: 250px;
   width: 250px;
-  padding-top: 150px;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  display: block;
-  margin: auto;
+  align-self: center;
+  justify-self: center;
+  padding-bottom: 100px;
 }
