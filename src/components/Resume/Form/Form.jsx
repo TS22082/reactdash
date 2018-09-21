@@ -1,21 +1,34 @@
 import React, { Component } from "react";
+import firebase from "../../../firebase";
 import "./Form.css";
 
-class Form extends Component {
-  state = {};
+const db = firebase.database();
 
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = { contact: "", name: "", message: "" };
     this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+    this.clearState = this.clearState.bind(this);
   }
+
+  clearState = () => {};
 
   handleChange = event => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
     this.setState({ [name]: value });
-    console.log(this.state);
+  };
+
+  submitMessage = () => {
+    db.ref("messages").push({
+      message: this.state.message,
+      contact: this.state.contact,
+      name: this.state.name
+    });
+    this.setState({ contact: "", name: "", message: "" });
   };
 
   render() {
@@ -28,6 +41,7 @@ class Form extends Component {
             placeholder="Your contact info . . ."
             className="contactInput"
             onChange={this.handleChange}
+            value={this.state.contact}
           />
           <input
             type="text"
@@ -35,6 +49,7 @@ class Form extends Component {
             placeholder="Your name. . ."
             className="nameInput"
             onChange={this.handleChange}
+            value={this.state.name}
           />
         </form>
         <textarea
@@ -45,8 +60,11 @@ class Form extends Component {
           cols="30"
           rows="10"
           onChange={this.handleChange}
+          value={this.state.message}
         />
-        <button className="btnSubmit">Submit</button>
+        <button className="btnSubmit" onClick={this.submitMessage}>
+          Submit
+        </button>
       </div>
     );
   }
