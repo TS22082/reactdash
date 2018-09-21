@@ -40,6 +40,10 @@
   float: right;
 }
 
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .avatarImg {
   height: 250px;
   width: 250px;

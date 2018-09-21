@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Resume.css";
-import Login from "../Login/Login";
+import Login from "./Login/Login";
+import "./Form/Form";
+import Form from "./Form/Form";
 
 class Resume extends Component {
   constructor(props) {
@@ -38,11 +40,14 @@ class Resume extends Component {
             {this.state.toggle}
           </button>
         </div>
-        <img
-          src={require("../../img/myAvatar.png")}
-          alt="broke img"
-          className="avatarImg"
-        />
+        <div className="mainContainer">
+          <img
+            src={require("../../img/myAvatar.png")}
+            alt="broke img"
+            className="avatarImg"
+          />
+          <Form />
+        </div>
       </div>
     );
   }
