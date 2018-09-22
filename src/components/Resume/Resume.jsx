@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Resume.css";
 import Login from "./Login/Login";
-import "./Form/Form";
+import { RadialGauge } from "react-canvas-gauges";
 import Form from "./Form/Form";
 
 class Resume extends Component {
@@ -41,11 +41,82 @@ class Resume extends Component {
           </button>
         </div>
         <div className="mainContainer">
-          <img
-            src={require("../../img/myAvatar.png")}
-            alt="broke img"
-            className="avatarImg"
-          />
+          <div className="about">
+            <img
+              src={require("../../img/myAvatar.png")}
+              alt="broke img"
+              className="avatarImg"
+            />
+            <div className="gauges">
+              <div className="gauge">
+                <RadialGauge
+                  units="Programming"
+                  title="Javascript"
+                  value={92}
+                  minValue={0}
+                  maxValue={100}
+                  majorTicks={[
+                    "0",
+                    "15",
+                    "30",
+                    "40",
+                    "50",
+                    "60",
+                    "70",
+                    "80",
+                    "90",
+                    "100"
+                  ]}
+                  minorTicks={2}
+                />
+              </div>
+              <div className="gauge">
+                <RadialGauge
+                  units="Programming"
+                  title="Node"
+                  value={85}
+                  minValue={0}
+                  maxValue={100}
+                  majorTicks={[
+                    "0",
+                    "15",
+                    "30",
+                    "40",
+                    "50",
+                    "60",
+                    "70",
+                    "80",
+                    "90",
+                    "100"
+                  ]}
+                  minorTicks={2}
+                />
+              </div>
+              <div className="gauge">
+                <RadialGauge
+                  units="Front End"
+                  title="ReactJS"
+                  value={90}
+                  minValue={0}
+                  maxValue={100}
+                  majorTicks={[
+                    "0",
+                    "15",
+                    "30",
+                    "40",
+                    "50",
+                    "60",
+                    "70",
+                    "80",
+                    "90",
+                    "100"
+                  ]}
+                  minorTicks={2}
+                />
+              </div>
+            </div>
+          </div>
+
           <Form />
         </div>
       </div>
