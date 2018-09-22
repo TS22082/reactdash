@@ -29,10 +29,12 @@
 
 .loginForm {
   justify-self: right;
+  margin-right: 5px;
 }
 
 .adminToggle {
   border: solid;
+  margin-right: 5px;
   background-color: black;
   color: white;
   height: 25px;

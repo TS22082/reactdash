@@ -7,8 +7,9 @@
 .messageAuthor {
   background-color: black;
   color: white;
-  border: solid #ecf0f1;
+  border: solid #2ecc71;
   margin: 0px;
+  margin-bottom: 5px;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -21,13 +22,13 @@
 .messageContact {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: solid #ecf0f1;
+  border: solid #3498db;
   text-align: center;
   background-color: black;
 }
 
 .messageText {
-  border: solid #ecf0f1;
+  border: solid #3498db;
   padding-left: 5px;
   padding-bottom: 30px;
   background-color: black;
@@ -45,4 +46,5 @@
   border-color: #e74c3c;
   color: #e74c3c;
   justify-self: center;
+  letter-spacing: 0.5px;
 }
