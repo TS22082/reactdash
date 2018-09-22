@@ -1,12 +1,48 @@
 .messageContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 15px;
 }
 
 .messageAuthor {
+  background-color: black;
   color: white;
+  border: solid #ecf0f1;
+  margin: 0px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .fullMessage {
   color: white;
+}
+
+.messageContact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: solid #ecf0f1;
+  text-align: center;
+  background-color: black;
+}
+
+.messageText {
+  border: solid #ecf0f1;
+  padding-left: 5px;
+  padding-bottom: 30px;
+  background-color: black;
+  display: grid;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.deleteDtn {
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  border: solid;
+  border-color: #e74c3c;
+  color: #e74c3c;
+  justify-self: center;
 }

@@ -10,8 +10,13 @@ class Messages extends Component {
       messages: [],
       messageText: "",
       senderText: "",
-      contactText: ""
+      contactText: "",
+      viewMessage: false,
+      messageId: ""
     };
+
+    this.deleteMessage = this.deleteMessage.bind(this);
+    this.showMessage = this.showMessage.bind(this);
   }
 
   componentDidMount() {
@@ -24,7 +29,6 @@ class Messages extends Component {
         });
       });
       this.setState({ messages: messageArray });
-      console.log(this.state.messages);
     });
   }
 
@@ -35,29 +39,66 @@ class Messages extends Component {
         this.setState({ senderText: snapshot.val().name });
         this.setState({ contactText: snapshot.val().contact });
         this.setState({ messageText: snapshot.val().message });
+        this.setState({ viewMessage: true });
+        this.setState({ messageId: messageID });
+
+        // use messageID to delete item freom firebase
+        // setstate  viewMessage to false
+        console.log(this.state.messageId);
       });
   };
+
+  deleteMessage = () => {
+    this.setState({ viewMessage: false });
+    const itemRef = db.ref(`/messages/${this.state.messageId}`);
+    itemRef.remove();
+  };
   render() {
-    return (
-      <div className="messageContainer">
-        <div>
-          {this.state.messages.map(message => (
-            <p
-              className="messageAuthor"
-              key={message.id}
-              onClick={() => this.showMessage(message.id)}
-            >
-              {message.name}
-            </p>
-          ))}
+    if (this.state.viewMessage === true) {
+      return (
+        <div className="messageContainer">
+          <div>
+            {this.state.messages.map(message => (
+              <p
+                className="messageAuthor"
+                key={message.id}
+                onClick={() => this.showMessage(message.id)}
+              >
+                {message.name}
+              </p>
+            ))}
+          </div>
+          <div className="fullMessage">
+            <div className="messageContact">
+              <p>{this.state.senderText}</p>
+              <p>{this.state.contactText}</p>
+            </div>
+            <div className="messageText">
+              <p>{this.state.messageText}</p>
+              <button className="deleteDtn" onClick={this.deleteMessage}>
+                Delete
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="fullMessage">
-          <p>{this.state.senderText}</p>
-          <p>{this.state.contactText}</p>
-          <p>{this.state.messageText}</p>
+      );
+    } else {
+      return (
+        <div className="messageContainer">
+          <div>
+            {this.state.messages.map(message => (
+              <p
+                className="messageAuthor"
+                key={message.id}
+                onClick={() => this.showMessage(message.id)}
+              >
+                {message.name}
+              </p>
+            ))}
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
