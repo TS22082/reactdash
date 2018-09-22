@@ -4,7 +4,6 @@ import "./Messages.css";
 
 const db = firebase.database();
 class Messages extends Component {
-  state = {};
   constructor() {
     super();
     this.state = {
@@ -16,8 +15,8 @@ class Messages extends Component {
   }
 
   componentDidMount() {
-    let messageArray = [];
     db.ref("messages").on("value", snapshot => {
+      const messageArray = [];
       snapshot.forEach(childSnapshot => {
         messageArray.push({
           id: childSnapshot.key,
@@ -28,11 +27,35 @@ class Messages extends Component {
       console.log(this.state.messages);
     });
   }
+
+  showMessage = messageID => {
+    db.ref(`/messages/${messageID}`)
+      .once("value")
+      .then(snapshot => {
+        this.setState({ senderText: snapshot.val().name });
+        this.setState({ contactText: snapshot.val().contact });
+        this.setState({ messageText: snapshot.val().message });
+      });
+  };
   render() {
     return (
       <div className="messageContainer">
-        <h1 className="test">hello</h1>
-        <h1 className="test">Hello</h1>
+        <div>
+          {this.state.messages.map(message => (
+            <p
+              className="messageAuthor"
+              key={message.id}
+              onClick={() => this.showMessage(message.id)}
+            >
+              {message.name}
+            </p>
+          ))}
+        </div>
+        <div className="fullMessage">
+          <p>{this.state.senderText}</p>
+          <p>{this.state.contactText}</p>
+          <p>{this.state.messageText}</p>
+        </div>
       </div>
     );
   }

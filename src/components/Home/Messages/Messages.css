@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.test {
+.messageAuthor {
+  color: white;
+}
+
+.fullMessage {
   color: white;
 }
