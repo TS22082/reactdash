@@ -49,6 +49,7 @@
 
 .about {
   display: grid;
+  grid-template-rows: 0.5fr 1fr;
 }
 .avatarImg {
   border-bottom-left-radius: 100%;
@@ -62,6 +63,7 @@
   height: 150px;
   width: 150px;
   justify-self: center;
+  margin-top: 15px;
 }
 
 .gauges {
