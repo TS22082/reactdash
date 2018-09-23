@@ -38,7 +38,7 @@ class Form extends Component {
           <input
             type="text"
             name="contact"
-            placeholder="Your contact info . . ."
+            placeholder="phone #, email. . ."
             className="contactInput"
             onChange={this.handleChange}
             value={this.state.contact}
@@ -57,7 +57,7 @@ class Form extends Component {
           id="message"
           className="messageInput"
           placeholder="message text. . ."
-          rows="20"
+          rows="25"
           onChange={this.handleChange}
           value={this.state.message}
         />

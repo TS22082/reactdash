@@ -41,97 +41,170 @@ class Resume extends Component {
           </button>
         </div>
         <div className="mainContainer">
-          <div className="about">
-            <img
-              src={require("../../img/myAvatar.png")}
-              alt="broke img"
-              className="avatarImg"
-            />
-            <div className="gauges">
-              <div className="gauge">
-                <RadialGauge
-                  title="Javascript"
-                  colorPlate="black"
-                  colorNeedle="white"
-                  colorNeedleEnd="white"
-                  colorBorderOuter="red"
-                  colorBorderOuterEnd="purple"
-                  value={92}
-                  minValue={0}
-                  maxValue={100}
-                  majorTicks={[
-                    "0",
-                    "15",
-                    "30",
-                    "40",
-                    "50",
-                    "60",
-                    "70",
-                    "80",
-                    "90",
-                    "100"
-                  ]}
-                  minorTicks={2}
-                />
-                <p className="description">Javascript</p>
-              </div>
-              <div className="gauge">
-                <RadialGauge
-                  title="Node"
-                  colorPlate="black"
-                  colorNeedle="white"
-                  colorNeedleEnd="white"
-                  colorBorderOuter="red"
-                  colorBorderOuterEnd="purple"
-                  value={85}
-                  minValue={0}
-                  maxValue={100}
-                  majorTicks={[
-                    "0",
-                    "15",
-                    "30",
-                    "40",
-                    "50",
-                    "60",
-                    "70",
-                    "80",
-                    "90",
-                    "100"
-                  ]}
-                  minorTicks={2}
-                />
-                <p className="description">Node</p>
-              </div>
-              <div className="gauge">
-                <RadialGauge
-                  title="ReactJS"
-                  colorPlate="black"
-                  colorNeedle="white"
-                  colorNeedleEnd="white"
-                  colorBorderOuter="red"
-                  colorBorderOuterEnd="purple"
-                  value={90}
-                  minValue={0}
-                  maxValue={100}
-                  majorTicks={[
-                    "0",
-                    "15",
-                    "30",
-                    "40",
-                    "50",
-                    "60",
-                    "70",
-                    "80",
-                    "90",
-                    "100"
-                  ]}
-                  minorTicks={2}
-                />
-                <p className="description">ReactJS</p>
-              </div>
+          <div className="gauges">
+            <div className="gauge">
+              <RadialGauge
+                title="Javascript"
+                colorPlate="black"
+                colorNeedle="white"
+                colorNeedleEnd="white"
+                colorBorderOuter="red"
+                colorBorderOuterEnd="purple"
+                value={92}
+                minValue={0}
+                maxValue={100}
+                majorTicks={[
+                  "0",
+                  "15",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100"
+                ]}
+                minorTicks={2}
+              />
+              <p className="description">Javascript</p>
+            </div>
+            <div className="gauge">
+              <RadialGauge
+                title="Node"
+                colorPlate="black"
+                colorNeedle="white"
+                colorNeedleEnd="white"
+                colorBorderOuter="red"
+                colorBorderOuterEnd="purple"
+                value={85}
+                minValue={0}
+                maxValue={100}
+                majorTicks={[
+                  "0",
+                  "15",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100"
+                ]}
+                minorTicks={2}
+              />
+              <p className="description">Node</p>
+            </div>
+            <div className="gauge">
+              <RadialGauge
+                title="ReactJS"
+                colorPlate="black"
+                colorNeedle="white"
+                colorNeedleEnd="white"
+                colorBorderOuter="red"
+                colorBorderOuterEnd="purple"
+                value={90}
+                minValue={0}
+                maxValue={100}
+                majorTicks={[
+                  "0",
+                  "15",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100"
+                ]}
+                minorTicks={2}
+              />
+              <p className="description">ReactJS</p>
+            </div>
+            <div className="gauge">
+              <RadialGauge
+                title="Python"
+                colorPlate="black"
+                colorNeedle="white"
+                colorNeedleEnd="white"
+                colorBorderOuter="red"
+                colorBorderOuterEnd="purple"
+                value={80}
+                minValue={0}
+                maxValue={100}
+                majorTicks={[
+                  "0",
+                  "15",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100"
+                ]}
+                minorTicks={2}
+              />
+              <p className="description">Python</p>
+            </div>
+            <div className="gauge">
+              <RadialGauge
+                title="CSS"
+                colorPlate="black"
+                colorNeedle="white"
+                colorNeedleEnd="white"
+                colorBorderOuter="red"
+                colorBorderOuterEnd="purple"
+                value={85}
+                minValue={0}
+                maxValue={100}
+                majorTicks={[
+                  "0",
+                  "15",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100"
+                ]}
+                minorTicks={2}
+              />
+              <p className="description">CSS</p>
+            </div>
+            <div className="gauge">
+              <RadialGauge
+                title="C++"
+                colorPlate="black"
+                colorNeedle="white"
+                colorNeedleEnd="white"
+                colorBorderOuter="red"
+                colorBorderOuterEnd="purple"
+                value={85}
+                minValue={0}
+                maxValue={100}
+                majorTicks={[
+                  "0",
+                  "15",
+                  "30",
+                  "40",
+                  "50",
+                  "60",
+                  "70",
+                  "80",
+                  "90",
+                  "100"
+                ]}
+                minorTicks={2}
+              />
+              <p className="description">C++</p>
             </div>
           </div>
-
           <Form />
         </div>
       </div>
