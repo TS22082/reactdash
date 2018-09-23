@@ -50,13 +50,15 @@
 .gauge {
   height: 150px;
   width: 150px;
-  align-self: center;
-  justify-self: center;
 }
 
 .gauges {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-self: center;
+  justify-self: center;
+  height: 500px;
+  width: 500px;
 }
 
 .description {
