@@ -50,8 +50,12 @@ class Resume extends Component {
             <div className="gauges">
               <div className="gauge">
                 <RadialGauge
-                  units="Programming"
                   title="Javascript"
+                  colorPlate="black"
+                  colorNeedle="white"
+                  colorNeedleEnd="white"
+                  colorBorderOuter="red"
+                  colorBorderOuterEnd="purple"
                   value={92}
                   minValue={0}
                   maxValue={100}
@@ -69,11 +73,16 @@ class Resume extends Component {
                   ]}
                   minorTicks={2}
                 />
+                <p className="description">Javascript</p>
               </div>
               <div className="gauge">
                 <RadialGauge
-                  units="Programming"
                   title="Node"
+                  colorPlate="black"
+                  colorNeedle="white"
+                  colorNeedleEnd="white"
+                  colorBorderOuter="red"
+                  colorBorderOuterEnd="purple"
                   value={85}
                   minValue={0}
                   maxValue={100}
@@ -91,11 +100,16 @@ class Resume extends Component {
                   ]}
                   minorTicks={2}
                 />
+                <p className="description">Node</p>
               </div>
               <div className="gauge">
                 <RadialGauge
-                  units="Front End"
                   title="ReactJS"
+                  colorPlate="black"
+                  colorNeedle="white"
+                  colorNeedleEnd="white"
+                  colorBorderOuter="red"
+                  colorBorderOuterEnd="purple"
                   value={90}
                   minValue={0}
                   maxValue={100}
@@ -113,6 +127,7 @@ class Resume extends Component {
                   ]}
                   minorTicks={2}
                 />
+                <p className="description">ReactJS</p>
               </div>
             </div>
           </div>

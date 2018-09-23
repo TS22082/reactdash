@@ -68,3 +68,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+.description {
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+}
