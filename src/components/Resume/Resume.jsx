@@ -46,25 +46,15 @@ class Resume extends Component {
               <RadialGauge
                 title="Javascript"
                 colorPlate="black"
+                colorTitle="white"
                 colorNeedle="white"
                 colorNeedleEnd="white"
-                colorBorderOuter="red"
-                colorBorderOuterEnd="purple"
+                colorBorderOuter="transparent"
+                colorBorderInner="transparent"
+                colorBorderOuterEnd="transparent"
                 value={92}
                 minValue={0}
                 maxValue={100}
-                majorTicks={[
-                  "0",
-                  "15",
-                  "30",
-                  "40",
-                  "50",
-                  "60",
-                  "70",
-                  "80",
-                  "90",
-                  "100"
-                ]}
                 minorTicks={2}
               />
               <p className="description">Javascript</p>
@@ -72,26 +62,15 @@ class Resume extends Component {
             <div className="gauge">
               <RadialGauge
                 title="Node"
+                colorTitle="white"
                 colorPlate="black"
                 colorNeedle="white"
                 colorNeedleEnd="white"
-                colorBorderOuter="red"
-                colorBorderOuterEnd="purple"
+                colorBorderOuter="transparent"
+                colorBorderInner="transparent"
                 value={85}
                 minValue={0}
                 maxValue={100}
-                majorTicks={[
-                  "0",
-                  "15",
-                  "30",
-                  "40",
-                  "50",
-                  "60",
-                  "70",
-                  "80",
-                  "90",
-                  "100"
-                ]}
                 minorTicks={2}
               />
               <p className="description">Node</p>
@@ -99,26 +78,15 @@ class Resume extends Component {
             <div className="gauge">
               <RadialGauge
                 title="ReactJS"
+                colorTitle="white"
                 colorPlate="black"
                 colorNeedle="white"
                 colorNeedleEnd="white"
-                colorBorderOuter="red"
-                colorBorderOuterEnd="purple"
+                colorBorderOuter="transparent"
+                colorBorderInner="transparent"
                 value={90}
                 minValue={0}
                 maxValue={100}
-                majorTicks={[
-                  "0",
-                  "15",
-                  "30",
-                  "40",
-                  "50",
-                  "60",
-                  "70",
-                  "80",
-                  "90",
-                  "100"
-                ]}
                 minorTicks={2}
               />
               <p className="description">ReactJS</p>
@@ -126,26 +94,15 @@ class Resume extends Component {
             <div className="gauge">
               <RadialGauge
                 title="Python"
+                colorTitle="white"
                 colorPlate="black"
                 colorNeedle="white"
                 colorNeedleEnd="white"
-                colorBorderOuter="red"
-                colorBorderOuterEnd="purple"
+                colorBorderOuter="transparent"
+                colorBorderInner="transparent"
                 value={80}
                 minValue={0}
                 maxValue={100}
-                majorTicks={[
-                  "0",
-                  "15",
-                  "30",
-                  "40",
-                  "50",
-                  "60",
-                  "70",
-                  "80",
-                  "90",
-                  "100"
-                ]}
                 minorTicks={2}
               />
               <p className="description">Python</p>
@@ -153,26 +110,15 @@ class Resume extends Component {
             <div className="gauge">
               <RadialGauge
                 title="CSS"
+                colorTitle="white"
                 colorPlate="black"
                 colorNeedle="white"
                 colorNeedleEnd="white"
-                colorBorderOuter="red"
-                colorBorderOuterEnd="purple"
+                colorBorderOuter="transparent"
+                colorBorderInner="transparent"
                 value={85}
                 minValue={0}
                 maxValue={100}
-                majorTicks={[
-                  "0",
-                  "15",
-                  "30",
-                  "40",
-                  "50",
-                  "60",
-                  "70",
-                  "80",
-                  "90",
-                  "100"
-                ]}
                 minorTicks={2}
               />
               <p className="description">CSS</p>
@@ -180,26 +126,15 @@ class Resume extends Component {
             <div className="gauge">
               <RadialGauge
                 title="C++"
+                colorTitle="white"
                 colorPlate="black"
                 colorNeedle="white"
                 colorNeedleEnd="white"
-                colorBorderOuter="red"
-                colorBorderOuterEnd="purple"
+                colorBorderOuter="transparent"
+                colorBorderInner="transparent"
                 value={85}
                 minValue={0}
                 maxValue={100}
-                majorTicks={[
-                  "0",
-                  "15",
-                  "30",
-                  "40",
-                  "50",
-                  "60",
-                  "70",
-                  "80",
-                  "90",
-                  "100"
-                ]}
                 minorTicks={2}
               />
               <p className="description">C++</p>
