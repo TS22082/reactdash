@@ -15,7 +15,6 @@
   transition: 0.5s;
   align-items: center;
   margin: 0px;
-  height: 10vh;
 }
 
 .title {
@@ -49,12 +48,22 @@
 
 .leftSide {
   display: grid;
-  justify-items: center;
-  align-items: center;
+  grid-template-rows: 15vh 1fr;
 }
 
-.description {
+.resumeNav {
+  display: grid;
+}
+
+.navBtn {
+  justify-self: center;
+  align-self: end;
+}
+
+.navBtn button {
+  padding: 10px 15px 10px 15px;
+  background-color: black;
   color: white;
-  letter-spacing: 1.5px;
-  text-align: center;
+  letter-spacing: 1px;
+  border: solid white;
 }

@@ -25,7 +25,6 @@ class Guages extends Component {
               maxValue={100}
               minorTicks={2}
             />
-            <p className="description">Javascript</p>
           </div>
           <div className="gauge">
             <RadialGauge
@@ -41,7 +40,6 @@ class Guages extends Component {
               maxValue={100}
               minorTicks={2}
             />
-            <p className="description">ReactJS</p>
           </div>
           <div className="gauge">
             <RadialGauge
@@ -57,7 +55,6 @@ class Guages extends Component {
               maxValue={100}
               minorTicks={2}
             />
-            <p className="description">CSS</p>
           </div>
           <div className="gauge">
             <RadialGauge
@@ -73,7 +70,6 @@ class Guages extends Component {
               maxValue={100}
               minorTicks={2}
             />
-            <p className="description">Node</p>
           </div>
           <div className="gauge">
             <RadialGauge
@@ -89,7 +85,6 @@ class Guages extends Component {
               maxValue={100}
               minorTicks={2}
             />
-            <p className="description">Python</p>
           </div>
           <div className="gauge">
             <RadialGauge
@@ -105,7 +100,6 @@ class Guages extends Component {
               maxValue={100}
               minorTicks={2}
             />
-            <p className="description">C++</p>
           </div>
         </div>
       </div>
