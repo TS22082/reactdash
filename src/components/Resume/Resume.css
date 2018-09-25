@@ -47,23 +47,14 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.gauge {
-  height: 150px;
-  width: 150px;
-}
-
-.gauges {
+.leftSide {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-self: center;
-  justify-self: center;
-  height: 500px;
-  width: 500px;
+  justify-items: center;
+  align-items: center;
 }
 
 .description {
   color: white;
+  letter-spacing: 1.5px;
   text-align: center;
-  font-family: Verdana;
-  letter-spacing: 1px;
 }

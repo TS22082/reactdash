@@ -57,7 +57,7 @@ class Form extends Component {
           id="message"
           className="messageInput"
           placeholder="message text. . ."
-          rows="25"
+          rows="20"
           onChange={this.handleChange}
           value={this.state.message}
         />

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Resume.css";
 import Login from "./Login/Login";
-import { RadialGauge } from "react-canvas-gauges";
+import Guages from "./Guages/Guages";
 import Form from "./Form/Form";
 
 class Resume extends Component {
@@ -41,104 +41,8 @@ class Resume extends Component {
           </button>
         </div>
         <div className="mainContainer">
-          <div className="gauges">
-            <div className="gauge">
-              <RadialGauge
-                title="Javascript"
-                colorPlate="black"
-                colorTitle="white"
-                colorNeedle="white"
-                colorNeedleEnd="white"
-                colorBorderOuter="transparent"
-                colorBorderInner="transparent"
-                colorBorderOuterEnd="transparent"
-                value={92}
-                minValue={0}
-                maxValue={100}
-                minorTicks={2}
-              />
-              <p className="description">Javascript</p>
-            </div>
-            <div className="gauge">
-              <RadialGauge
-                title="Node"
-                colorTitle="white"
-                colorPlate="black"
-                colorNeedle="white"
-                colorNeedleEnd="white"
-                colorBorderOuter="transparent"
-                colorBorderInner="transparent"
-                value={85}
-                minValue={0}
-                maxValue={100}
-                minorTicks={2}
-              />
-              <p className="description">Node</p>
-            </div>
-            <div className="gauge">
-              <RadialGauge
-                title="ReactJS"
-                colorTitle="white"
-                colorPlate="black"
-                colorNeedle="white"
-                colorNeedleEnd="white"
-                colorBorderOuter="transparent"
-                colorBorderInner="transparent"
-                value={90}
-                minValue={0}
-                maxValue={100}
-                minorTicks={2}
-              />
-              <p className="description">ReactJS</p>
-            </div>
-            <div className="gauge">
-              <RadialGauge
-                title="Python"
-                colorTitle="white"
-                colorPlate="black"
-                colorNeedle="white"
-                colorNeedleEnd="white"
-                colorBorderOuter="transparent"
-                colorBorderInner="transparent"
-                value={80}
-                minValue={0}
-                maxValue={100}
-                minorTicks={2}
-              />
-              <p className="description">Python</p>
-            </div>
-            <div className="gauge">
-              <RadialGauge
-                title="CSS"
-                colorTitle="white"
-                colorPlate="black"
-                colorNeedle="white"
-                colorNeedleEnd="white"
-                colorBorderOuter="transparent"
-                colorBorderInner="transparent"
-                value={85}
-                minValue={0}
-                maxValue={100}
-                minorTicks={2}
-              />
-              <p className="description">CSS</p>
-            </div>
-            <div className="gauge">
-              <RadialGauge
-                title="C++"
-                colorTitle="white"
-                colorPlate="black"
-                colorNeedle="white"
-                colorNeedleEnd="white"
-                colorBorderOuter="transparent"
-                colorBorderInner="transparent"
-                value={85}
-                minValue={0}
-                maxValue={100}
-                minorTicks={2}
-              />
-              <p className="description">C++</p>
-            </div>
+          <div className="leftSide">
+            <Guages />
           </div>
           <Form />
         </div>

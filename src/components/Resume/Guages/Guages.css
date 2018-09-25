@@ -1,0 +1,10 @@
+.gauge {
+  height: 150px;
+  width: 150px;
+}
+
+.gauges {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+}
