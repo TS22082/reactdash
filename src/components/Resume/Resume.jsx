@@ -43,7 +43,7 @@ class Resume extends Component {
         <div className="mainContainer">
           <div className="leftSide">
             <div className="resumeNav">
-              <div className="navBtn">
+              <div className="navBtns">
                 <button>About</button>
                 <button>Skills</button>
               </div>

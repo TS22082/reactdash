@@ -49,18 +49,19 @@
 .leftSide {
   display: grid;
   grid-template-rows: 15vh 1fr;
+  justify-items: center;
 }
 
 .resumeNav {
   display: grid;
 }
 
-.navBtn {
+.navBtns {
   justify-self: center;
   align-self: end;
 }
 
-.navBtn button {
+.navBtns button {
   padding: 10px 15px 10px 15px;
   background-color: black;
   color: white;
