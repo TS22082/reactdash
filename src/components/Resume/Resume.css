@@ -63,10 +63,18 @@
 
 .navBtns button {
   padding: 10px 15px 10px 15px;
-  background-color: black;
-  color: white;
   letter-spacing: 1px;
   border: solid white;
+}
+
+.abtBtn {
+  background-color: black;
+  color: white;
+}
+
+.skillsBtn {
+  background-color: white;
+  color: black;
 }
 
 .success {

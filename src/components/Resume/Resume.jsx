@@ -33,11 +33,25 @@ class Resume extends Component {
     }
   };
 
-  setView = () => {
-    if (this.state.toggleView === "intro") {
+  setView = view => {
+    if (view === "gauges") {
       this.setState({ toggleView: "gauges" });
-    } else {
+      document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
+        "white";
+      document.getElementsByClassName("abtBtn")[0].style.color = "black";
+
+      document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
+        "black";
+      document.getElementsByClassName("skillsBtn")[0].style.color = "white";
+    } else if (view === "intro") {
       this.setState({ toggleView: "intro" });
+      document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
+        "black";
+      document.getElementsByClassName("abtBtn")[0].style.color = "white";
+
+      document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
+        "white";
+      document.getElementsByClassName("skillsBtn")[0].style.color = "black";
     }
   };
 
@@ -59,8 +73,18 @@ class Resume extends Component {
           <div className="leftSide">
             <div className="resumeNav">
               <div className="navBtns">
-                <button onClick={() => this.setView()}>About</button>
-                <button onClick={() => this.setView()}>Skills</button>
+                <button
+                  onClick={() => this.setView("intro")}
+                  className="abtBtn"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => this.setView("gauges")}
+                  className="skillsBtn"
+                >
+                  Skills
+                </button>
               </div>
             </div>
             {this.displayToggle()}
