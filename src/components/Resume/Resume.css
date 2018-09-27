@@ -68,3 +68,7 @@
   letter-spacing: 1px;
   border: solid white;
 }
+
+.success {
+  color: white;
+}
