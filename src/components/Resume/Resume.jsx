@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Resume.css";
 import Login from "./Login/Login";
 import Guages from "./Guages/Guages";
+import Intro from "./Intro/Intro";
 import Form from "./Form/Form";
 
 class Resume extends Component {
@@ -29,7 +30,7 @@ class Resume extends Component {
     if (this.state.toggleView === "gauges") {
       return <Guages />;
     } else if (this.state.toggleView === "intro") {
-      return <h1 className="success">Winning</h1>;
+      return <Intro />;
     }
   };
 
