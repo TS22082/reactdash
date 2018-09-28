@@ -8,9 +8,10 @@ class Intro extends Component {
       <div className="intro">
         <h3 className="title">About Me</h3>
         <p>
-          Hello Everyones!Hello Everyones!Hello Everyones!Hello Everyones!Hello
-          Everyones!Hello Everyones!Hello Everyones!Hello Everyones!Hello
-          Everyones!
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          fermentum vulputate feugiat. Ut imperdiet erat non lacus pharetra
+          finibus. Duis ultricies purus vel elementum rutrum. Nulla sagittis
+          tellus at turpis tincidunt finibus.
         </p>
       </div>
     );
