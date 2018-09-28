@@ -8,10 +8,9 @@ class Intro extends Component {
       <div className="intro">
         <h3 className="introTitle">About Me</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          fermentum vulputate feugiat. Ut imperdiet erat non lacus pharetra
-          finibus. Duis ultricies purus vel elementum rutrum. Nulla sagittis
-          tellus at turpis tincidunt finibus.
+          Hello everyone! This full stack ReactJS app is a work in progress.
+          Thank you for visiting! If you have any questions or are interested in
+          talking about a project use the form on the right to contact me.
         </p>
       </div>
     );
