@@ -6,7 +6,7 @@ class Intro extends Component {
   render() {
     return (
       <div className="intro">
-        <h3 className="title">About Me</h3>
+        <h3 className="introTitle">About Me</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
           fermentum vulputate feugiat. Ut imperdiet erat non lacus pharetra
