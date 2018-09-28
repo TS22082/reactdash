@@ -34,25 +34,32 @@ class Resume extends Component {
     }
   };
 
+  activateGuages = () => {
+    document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
+      "white";
+    document.getElementsByClassName("abtBtn")[0].style.color = "black";
+
+    document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
+      "black";
+    document.getElementsByClassName("skillsBtn")[0].style.color = "white";
+  };
+
+  activateSkills = () => {
+    document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
+      "black";
+    document.getElementsByClassName("abtBtn")[0].style.color = "white";
+
+    document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
+      "white";
+    document.getElementsByClassName("skillsBtn")[0].style.color = "black";
+  };
   setView = view => {
     if (view === "gauges") {
       this.setState({ toggleView: "gauges" });
-      document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
-        "white";
-      document.getElementsByClassName("abtBtn")[0].style.color = "black";
-
-      document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
-        "black";
-      document.getElementsByClassName("skillsBtn")[0].style.color = "white";
+      this.activateGuages();
     } else if (view === "intro") {
       this.setState({ toggleView: "intro" });
-      document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
-        "black";
-      document.getElementsByClassName("abtBtn")[0].style.color = "white";
-
-      document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
-        "white";
-      document.getElementsByClassName("skillsBtn")[0].style.color = "black";
+      this.activateSkills();
     }
   };
 
