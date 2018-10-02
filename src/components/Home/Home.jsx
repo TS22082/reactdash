@@ -8,7 +8,6 @@ import "./Home.css";
 
 class Home extends Component {
   state = {};
-
   detectEsc = event => {
     if (event.keyCode === 27) {
       firebase.auth().signOut();
