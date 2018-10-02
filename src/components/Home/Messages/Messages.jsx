@@ -68,9 +68,10 @@ class Messages extends Component {
       );
     }
   };
-  render() {
-    return (
-      <div className="messageContainer">
+
+  saySomething = () => {
+    if (this.state.messages.length > 0) {
+      return (
         <div>
           {this.state.messages.map(message => (
             <p
@@ -82,6 +83,19 @@ class Messages extends Component {
             </p>
           ))}
         </div>
+      );
+    } else {
+      return (
+        <div>
+          <p className="messageAuthor blueBorder">There are no messages</p>
+        </div>
+      );
+    }
+  };
+  render() {
+    return (
+      <div className="messageContainer">
+        {this.saySomething()}
         {this.renderMessages()}
       </div>
     );
