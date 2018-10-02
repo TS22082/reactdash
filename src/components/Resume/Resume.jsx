@@ -36,22 +36,22 @@ class Resume extends Component {
 
   activateGuages = () => {
     document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
-      "white";
-    document.getElementsByClassName("abtBtn")[0].style.color = "black";
-
-    document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
-      "black";
-    document.getElementsByClassName("skillsBtn")[0].style.color = "white";
-  };
-
-  activateSkills = () => {
-    document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
       "black";
     document.getElementsByClassName("abtBtn")[0].style.color = "white";
 
     document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
       "white";
     document.getElementsByClassName("skillsBtn")[0].style.color = "black";
+  };
+
+  activateSkills = () => {
+    document.getElementsByClassName("abtBtn")[0].style.backgroundColor =
+      "white";
+    document.getElementsByClassName("abtBtn")[0].style.color = "black";
+
+    document.getElementsByClassName("skillsBtn")[0].style.backgroundColor =
+      "black";
+    document.getElementsByClassName("skillsBtn")[0].style.color = "white";
   };
   setView = view => {
     if (view === "gauges") {
