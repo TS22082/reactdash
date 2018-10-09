@@ -69,7 +69,7 @@ class Messages extends Component {
     }
   };
 
-  saySomething = () => {
+  showSender = () => {
     if (this.state.messages.length > 0) {
       return (
         <div>
@@ -95,7 +95,7 @@ class Messages extends Component {
   render() {
     return (
       <div className="messageContainer">
-        {this.saySomething()}
+        {this.showSender()}
         {this.renderMessages()}
       </div>
     );
