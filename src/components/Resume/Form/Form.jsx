@@ -10,7 +10,6 @@ class Form extends Component {
     this.state = { contact: "", name: "", message: "" };
     this.handleChange = this.handleChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
-    this.clearState = this.clearState.bind(this);
   }
 
   handleChange = event => {
