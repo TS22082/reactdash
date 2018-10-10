@@ -13,8 +13,6 @@ class Form extends Component {
     this.clearState = this.clearState.bind(this);
   }
 
-  clearState = () => {};
-
   handleChange = event => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
